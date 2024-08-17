@@ -1,0 +1,237 @@
+.loginsignup-body {
+    margin: 0;
+    color: #6a6f8c;
+    background: #c8c8c8;
+    font: 600 16px/18px "Open Sans", sans-serif;
+}
+.loginsignup-wrap {
+
+    width: 100%;
+    margin:20px 40%;
+    max-width: 500px;
+    min-height: 800px;
+    position: relative;
+    background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.loginsignup-html {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+.loginsignup-html .loginsignup-tab,
+.loginsignup-form .loginsignup-label,
+.loginsignup-form .loginsignup-button {
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.loginsignup-html .loginsignup-tab {
+    font-size: 20px;
+
+    cursor: pointer;
+    padding-bottom:10px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    color: white;
+
+}
+.loginsignup-html .loginsignup-sign-in:checked + .loginsignup-tab,
+.loginsignup-html .loginsignup-sign-up:checked + .loginsignup-tab {
+    color: #fff;
+    cursor: pointer;
+
+}
+.loginsignup-form {
+    min-height: 345px;
+    position: relative;perspective: 1000px;
+    transform-style: preserve-3d;
+
+}
+.loginsignup-form .loginsignup-group {
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.loginsignup-form .loginsignup-group .loginsignup-label,
+.loginsignup-form .loginsignup-group .loginsignup-input,
+.loginsignup-form .loginsignup-group .loginsignup-button {
+    width: 100%;
+    color: black;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.loginsignup-form .loginsignup-group .loginsignup-input,
+.loginsignup-form .loginsignup-group .loginsignup-button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: white;
+
+}
+.loginsignup-form .loginsignup-group input[data-type="password"] {
+    -webkit-text-security: circle;
+
+}
+.loginsignup-form .loginsignup-group .loginsignup-label {
+    color:white;
+    font-size: 18px;
+
+}
+.loginsignup-form .loginsignup-group .loginsignup-button {
+    background: white;
+    cursor: pointer;
+
+}
+.loginsignup-form .loginsignup-group .loginsignup-button:hover {
+    background: #1454c4;
+    cursor: pointer;
+
+}
+.loginsignup-form .loginsignup-group label .loginsignup-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+}
+.loginsignup-form .loginsignup-group label .loginsignup-icon:before,
+.loginsignup-form .loginsignup-group label .loginsignup-icon:after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    transition: all 0.2s ease-in-out 0s;
+}
+.loginsignup-form .loginsignup-group label .loginsignup-icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+
+}
+.loginsignup-form .loginsignup-group label .loginsignup-icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+.loginsignup-form .loginsignup-group .loginsignup-check:checked + label {
+    color: #fff;
+}
+.loginsignup-form .loginsignup-group .loginsignup-check:checked + label .loginsignup-icon {
+
+    background: #1161ee;
+}
+.loginsignup-form .loginsignup-group .loginsignup-check:checked + label .loginsignup-icon:before {
+    transform: scale(1) rotate(45deg);
+
+}
+.loginsignup-form .loginsignup-group .loginsignup-check:checked + label .loginsignup-icon:after {
+    transform: scale(1) rotate(-45deg);
+
+}
+.loginsignup-html .loginsignup-sign-in:checked + .loginsignup-tab + .loginsignup-sign-up + .loginsignup-tab + .loginsignup-form .loginsignup-sign-in-htm {
+    transform: rotate(0);
+}
+.loginsignup-html .loginsignup-sign-up:checked + .loginsignup-tab + .loginsignup-form .loginsignup-sign-up-htm {
+    transform: rotate(0);
+}
+.loginsignup-hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: white;
+}
+.loginsignup-foot-lnk {
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.loginsignup-foot-lnk a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+h1{
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.forgot-password-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.forgot-password-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginsignup-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.loginsignup-label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+
+.loginsignup-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.loginsignup-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loginsignup-button:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password-close {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forgot-password-close:hover {
+    background-color: #c9302c;
+}
+
+
+
+

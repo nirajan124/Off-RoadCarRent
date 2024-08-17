@@ -1,0 +1,10 @@
+.car-all-container {
+    padding: 10px;
+    margin-left: 150px;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}

@@ -1,0 +1,58 @@
+.contract_container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #004242;
+    margin-bottom: 100px;
+}
+
+.contract_container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+
+}
+
+.contract-term {
+    margin-bottom: 20px;
+}
+
+.contract-term h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.contract-term p, .contract-term ul {
+    margin-left: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.contract-term ul {
+    list-style-type: disc;
+}
+
+.contract-term ul li {
+    margin-bottom: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}

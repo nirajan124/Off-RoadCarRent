@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-body, .home-html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: white;
+    background-color: whitesmoke;
+}
+
+/* Main content styles */
+.home-main .home-hero {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    visibility: visible;
+}
+
+.home-main .home-hero h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 150px;
+}
+
+.home-step {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home-step-number {
+    background-color: #4CAF50;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-step h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.home-step p {
+    font-size: 20px;
+}
+
+.home-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    visibility: visible;
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    width: 1500px; /* The specified width */
+    height: 740px; /* The specified height */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.home-main-heading {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.home-section {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.home-section .home-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.home-text-content {
+    max-width: 500px;
+}
+
+.home-sub-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.home-text-content p {
+    margin: 5px 0;
+    line-height: 1.3em;
+    font-size: 20px;
+}
+
+/* Positioning each section */
+.home-user-friendly {
+    top: 80px;
+    left: 20px;
+    width: 400px;
+}
+
+.home-transparent-pricing {
+    bottom: 40px;
+    left: 20px;
+    width: 400px;
+}
+
+.home-wide-selection {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+}
+
+.home-flexible-booking {
+    top: 80px;
+    right: 20px;
+    width: 400px;
+}
+
+.home-easy-to-rent {
+    bottom: 40px;
+    right: 20px;
+    width: 400px;
+}
+
+.home-brands {
+    margin: 3px 0;
+    width: 100%;
+    height: 380px;
+    font-size: 40px;
+    text-align: center;
+    color: whitesmoke;
+    background: white;
+}
+
+.home-brands p {
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.home-container {
+    width: 100%;
+    height: 350px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    visibility: visible;
+    background-color: #444444;
+}
+
+.home-img-container {
+    display: flex;
+    width: 100%;
+    height: 350px;
+
+}
+
+.home-img {
+    width: 100%;
+    height:100%;
+}

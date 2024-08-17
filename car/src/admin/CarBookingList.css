@@ -1,0 +1,37 @@
+/* Car Booking List Styles */
+.booking-list-container {
+    margin-left: 250px; /* Offset the container to the right of the sidebar */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.booking-list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booking-list-table th,
+.booking-list-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.booking-list-table th {
+    background-color: #f2f2f2;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}

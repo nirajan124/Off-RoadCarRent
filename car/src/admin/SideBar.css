@@ -1,0 +1,47 @@
+/* Unique Sidebar Design */
+.sidebar {
+    height: 100vh; /* Full-height sidebar */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 0;
+    background-color: #2c3e50; /* Dark background color */
+    padding-top: 20px; /* Space at the top */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+  
+  .sidebar-button {
+    display: block; /* Block elements */
+    width: 100%; /* Full width of the sidebar */
+    padding: 15px; /* Padding inside buttons */
+    margin: 5px 0; /* Margin between buttons */
+    text-align: left; /* Align text to the left */
+    background-color: #34495e; /* Slightly lighter background for buttons */
+    color: white; /* White text color */
+    border: none; /* No borders */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .sidebar-button:hover {
+    background-color: #1abc9c; /* Change color on hover */
+  }
+  
+  .sidebar-button:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Auto height on small screens */
+      position: relative; /* Relative positioning */
+    }
+  
+    .sidebar-button {
+      font-size: 14px; /* Smaller font size on small screens */
+    }
+  }
+  

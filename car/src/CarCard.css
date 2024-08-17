@@ -1,0 +1,73 @@
+
+.car-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.car-brand {
+    font-size: 1.5em;
+    margin: 8px 0;
+}
+
+.car-seats,
+.car-price {
+    font-size: 1.2em;
+    margin: 4px 0;
+}
+
+.book-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.success-popup {
+    position: fixed;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #004242;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+

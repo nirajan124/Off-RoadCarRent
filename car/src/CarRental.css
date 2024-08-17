@@ -1,0 +1,123 @@
+.car-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.car-header {
+    background-color: #004242;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.car-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.car-filters {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-dropdown label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.car-dropdown select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.car-vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+
+}
+
+.car-vehicle-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #004242;
+}
+
+.car-image-container img {
+    width: 100%;
+    display: block;
+}
+
+.car-info-container {
+    padding: 16px;
+    background-color: white;
+}
+
+.car-location,
+.car-seats {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.car-location img,
+.car-seats img {
+    margin-right: 8px;
+}
+
+.car-location,
+.car-seats,
+.car-price-section {
+    justify-content: flex-start;
+}
+
+.car-price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.car-price {
+    text-align: left;
+}
+
+.car-price .car-estimate {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.car-price .car-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004242;
+}
+
+.car-book-button button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #004242;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.car-book-button button:hover {
+    background-color: #218838;
+}

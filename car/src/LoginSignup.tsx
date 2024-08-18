@@ -307,7 +307,7 @@ const LoginSignup: React.FC = () => {
             }
         } catch (error) {
             console.error('Error:', error);
-            toast.success('LOgin successfull');
+            toast.success('Signup successfull');
         }
     };
 

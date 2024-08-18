@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
 
             <div className="home-background" style={{background: `url(${system}) no-repeat center center/cover`}}>
                 <div className="home-content">
-                    <div className="home-main-heading">Why Choose Our Vehicle Rental System?</div>
+                    <div className="home-main-heading">Why Choose Our Off-road car Rental  System?</div>
 
                     <div className="home-section home-user-friendly">
                         <img src={userfriendly} alt="User Friendly" className="home-icon"/>

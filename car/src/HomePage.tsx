@@ -8,15 +8,12 @@ import selection from "./assets/wide_vehicle_selection.jpg";
 import flexible from "./assets/Flexible_booking.jpg";
 import easy from "./assets/easy_to_rent.jpg";
 import bmw from "./assets/Bmw-Logo.png";
-import kia from "./assets/Kia-Logo.jpg";
+import kia from "./assets/KIA.jpeg";
 import tata from "./assets/Tata-Logo.jpg";
 import mer from "./assets/Mercedes-Logo.jpg";
 import rolls from "./assets/Rolls-Royce-Logo.png";
 import volk from "./assets/Volkswagen-Logo.jpg";
-import honda from "./assets/Honda-Logo.jpg";
-import suzuki from "./assets/Suzuki-Logo.jpg";
-import vr from "./assets/Hartford-Logo-VR.jpg";
-import yamaha from "./assets/Yamaha-Logo.jpg";
+
 
 const HomePage: React.FC = () => {
     return (
@@ -100,11 +97,10 @@ const HomePage: React.FC = () => {
                         <img src={mer} alt="Brand 3" className="home-img"/>
                         <img src={kia} alt="Brand 4" className="home-img"/>
                         <img src={volk} alt="Brand 5" className="home-img"/>
-                        <img src={honda} alt="Brand 6" className="home-img"/>
-                        <img src={suzuki} alt="Brand 7" className="home-img"/>
+
+
                         <img src={tata} alt="Brand 8" className="home-img"/>
-                        <img src={yamaha} alt="Brand 9" className="home-img"/>
-                        <img src={vr} alt="Brand 10" className="home-img"/>
+
                     </div>
                 </div>
             </div>

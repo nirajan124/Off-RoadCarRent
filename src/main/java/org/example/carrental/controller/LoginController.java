@@ -30,7 +30,7 @@ public class LoginController {
 
         if (loginRequest.getEmail().equals(adminUsername) && loginRequest.getPassword().equals(adminPassword)) {
             response.put("message", "Admin login successful!");
-            return ResponseEntity.ok(response);
+            return ResponseEntity.ok(response); // Status code 200
         }
 
         // For regular user login
@@ -38,13 +38,12 @@ public class LoginController {
         if (user != null && user.getPassword().equals(loginRequest.getPassword())) {
             response.put("userId", user.getId()); // Include userId in response
             response.put("message", "Login successful!");
-            return ResponseEntity.ok(response);
+            return ResponseEntity.ok(response); // Status code 200
         }
 
         // If authentication fails
         response.put("message", "Invalid username or password");
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response); // Status code 401
     }
-
 }
 

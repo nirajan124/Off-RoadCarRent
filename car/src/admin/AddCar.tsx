@@ -31,6 +31,7 @@ const AddCarModal: React.FC<AddCarModalProps> = ({ isOpen, onClose }) => {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            console.log(response)
             setShowPopup(true); // Show success popup
             setTimeout(() => {
                 setShowPopup(false);

@@ -37,6 +37,7 @@ const CarBookingList: React.FC = () => {
             setBookings(data);
         } catch (error) {
             console.error('Error fetching bookings:', error);
+            // @ts-ignore
             setError(`Failed to fetch bookings. Error: ${error.message}`);
         }
     };

@@ -22,6 +22,7 @@
 .car-list-table {
     width: 100%; /* Set a fixed width similar to bike list */
     border-collapse: collapse;
+
 }
 
 .car-list-table th, .car-list-table td {
@@ -32,6 +33,7 @@
 
 .car-list-table th {
     background-color: #f4f4f4;
+
 }
 
 .car-image {

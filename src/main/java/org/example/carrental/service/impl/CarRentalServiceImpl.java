@@ -23,7 +23,8 @@ public class CarRentalServiceImpl implements CarRentalService {
 
     private final CarRentalRepository carRentalRepository;
 
-    private final String UPLOAD_DIRECTORY =System.getProperty("user.dir")+"/Carfile";
+    // Updated path to store images inside the project directory
+    private final String UPLOAD_DIRECTORY = "src/main/resources/uploads/cars";
 
     @Override
     public void saveCarRental(CarRentalPojo carRentalPojo) throws IOException {
@@ -33,12 +34,13 @@ public class CarRentalServiceImpl implements CarRentalService {
         carRentalEntity.setSeat(carRentalPojo.getSeat());
         carRentalEntity.setPrice(carRentalPojo.getPrice());
 
-
-        if(carRentalPojo.getCarImage()!=null){
-            Path filesave= Paths.get(UPLOAD_DIRECTORY,carRentalPojo.getCarImage().getOriginalFilename());
-            Files.write(filesave,carRentalPojo.getCarImage().getBytes());
+        if (carRentalPojo.getCarImage() != null) {
+            Path fileSavePath = Paths.get(UPLOAD_DIRECTORY, carRentalPojo.getCarImage().getOriginalFilename());
+            Files.createDirectories(fileSavePath.getParent()); // Create the directory if it doesn't exist
+            Files.write(fileSavePath, carRentalPojo.getCarImage().getBytes());
             carRentalEntity.setCarImage(carRentalPojo.getCarImage().getOriginalFilename());
         }
+
         carRentalRepository.save(carRentalEntity);
     }
 
@@ -53,10 +55,12 @@ public class CarRentalServiceImpl implements CarRentalService {
             carRentalEntity.setPrice(carRentalPojo.getPrice());
 
             if (carRentalPojo.getCarImage() != null) {
-                Path filesave = Paths.get(UPLOAD_DIRECTORY, carRentalPojo.getCarImage().getOriginalFilename());
-                Files.write(filesave, carRentalPojo.getCarImage().getBytes());
+                Path fileSavePath = Paths.get(UPLOAD_DIRECTORY, carRentalPojo.getCarImage().getOriginalFilename());
+                Files.createDirectories(fileSavePath.getParent()); // Create the directory if it doesn't exist
+                Files.write(fileSavePath, carRentalPojo.getCarImage().getBytes());
                 carRentalEntity.setCarImage(carRentalPojo.getCarImage().getOriginalFilename());
             }
+
             carRentalRepository.save(carRentalEntity);
         } else {
             throw new IllegalArgumentException("Car rental with ID " + carRentalPojo.getId() + " not found");
@@ -67,7 +71,7 @@ public class CarRentalServiceImpl implements CarRentalService {
     public List<CarRentalEntity> getAllCarRentals() {
         ImageToBase64Car imageToBase64Car = new ImageToBase64Car();
         List<CarRentalEntity> carRentalEntities = carRentalRepository.findAll();
-        carRentalEntities=carRentalEntities.stream().map(car->{
+        carRentalEntities = carRentalEntities.stream().map(car -> {
             car.setCarImage(imageToBase64Car.getImageBase64(car.getCarImage()));
             return car;
         }).collect(Collectors.toList());
@@ -83,5 +87,4 @@ public class CarRentalServiceImpl implements CarRentalService {
     public void deleteCarRental(Integer id) {
         carRentalRepository.deleteById(id);
     }
-
 }

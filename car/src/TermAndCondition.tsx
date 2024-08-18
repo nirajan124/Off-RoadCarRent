@@ -1,6 +1,6 @@
 // TermsAndConditions.tsx
 import React from 'react';
-import './termsandconditions.css';
+import './termandcondition.css';
 
 const TermsAndConditions: React.FC = () => {
     return (

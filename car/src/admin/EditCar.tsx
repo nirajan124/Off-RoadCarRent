@@ -62,9 +62,11 @@ const EditCarModal: React.FC<EditCarModalProps> = ({ isOpen, onClose, car, onSav
                     carImage: imageFile ? URL.createObjectURL(imageFile) : car.carImage,
                 };
 
+                // @ts-ignore
                 onSave(updatedCar);
                 onClose();
             } catch (error) {
+                // @ts-ignore
                 console.error('Error updating car:', error.response?.data || error.message);
             }
         }

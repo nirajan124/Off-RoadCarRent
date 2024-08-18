@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Car_Adding")
+@Table
 @Getter
 @Setter
 public class CarRentalEntity {

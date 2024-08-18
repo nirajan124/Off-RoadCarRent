@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.carrental.entity.CarRentalEntity;
 import org.example.carrental.pojo.CarRentalPojo;
 import org.example.carrental.service.CarRentalService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,11 +21,28 @@ public class CarRentalController {
     private final CarRentalService carRentalService;
 
     @PostMapping("/add")
-    public void rentCar(@RequestBody @ModelAttribute CarRentalPojo carRental) throws IOException {
-        System.out.println("Received Car Brand: " + carRental.getCarBrand());
-        carRentalService.saveCarRental(carRental);
-    }
+    public ResponseEntity<?> addCar(
+            @RequestParam("carBrand") String carBrand,
+            @RequestParam("seat") int seat,
+            @RequestParam("price") int price,
+            @RequestParam(value = "carImage", required = false) MultipartFile carImage) {
 
+        CarRentalPojo carRentalPojo = new CarRentalPojo();
+        carRentalPojo.setCarBrand(carBrand);
+        carRentalPojo.setSeat(seat);
+        carRentalPojo.setPrice(price);
+
+        if (carImage != null && !carImage.isEmpty()) {
+            carRentalPojo.setCarImage(carImage);
+        }
+
+        try {
+            carRentalService.saveCarRental(carRentalPojo);
+            return ResponseEntity.ok("Car added successfully");
+        } catch (IOException e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error saving car");
+        }
+    }
 
     @PutMapping("/car/{id}")
     public ResponseEntity<?> updateCar(

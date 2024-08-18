@@ -2,7 +2,7 @@ import React from 'react';
 import './CarRental.css';
 import {Link} from "react-router-dom";
 import rollsroyce from "./assets/rolls_car.jpg";
-import loaction from "./assets/location.jpg";
+import loaction from "./assets/location.png";
 import user from "./assets/user.jpg";
 const CarRental: React.FC = () => {
     return (
@@ -14,7 +14,6 @@ const CarRental: React.FC = () => {
                         <label htmlFor="vehicle-type">Vehicle Type</label>
                         <select id="vehicle-type">
                             <option value="all">All</option>
-                            <option value="bike">Bike</option>
                             <option value="car">Car</option>
                         </select>
                     </div>
@@ -79,12 +78,6 @@ const getVehicleName = (index: number) => {
     const names = ['Rolls Royce', 'Rolls Royce', 'BMW', 'BMW', 'KIA', 'KIA', 'Mercedes', 'Mercedes', 'Suzuki', 'Suzuki', 'TATA', 'TATA', 'Volkswagen', 'Volkswagen'];
     return names[index];
 };
-
-const getVehicleImage = (index: number) => {
-    const images = ['rolls_car.jpg', 'rolls_car.jpg', 'BMW.jpg', 'BMW.jpg', 'KIA.jpeg', 'KIA.jpeg', 'MERCEDES.png', 'MERCEDES.png', 'SUZUKI.png', 'SUZUKI.png', 'TATA.png', 'TATA.png', 'VOLKSWAGEN.png', 'VOLKSWAGEN.png'];
-    return images[index];
-};
-
 const getVehiclePrice = (index: number) => {
     const prices = ['$950', '$950', '$900', '$900', '$650', '$650', '$780', '$780', '$350', '$350', '$250', '$250', '$200', '$200'];
     return prices[index];

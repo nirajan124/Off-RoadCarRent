@@ -20,7 +20,8 @@ const CarBookingList: React.FC = () => {
 
     const fetchBookings = async () => {
         try {
-            const response = await fetch('http://localhost:8080/carbooking/all'); // Ensure the URL is correct
+            const response = await fetch('http://localhost:8080/cars/addlist'); // Ensure the URL is correct
+            console.log(response)
 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
